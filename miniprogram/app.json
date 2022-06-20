@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "usingComponents": {
+    "t-swiper": "tdesign-miniprogram/miniprogram_dist/swiper/swiper",
+    "t-swiper-item": "tdesign-miniprogram/miniprogram_dist/swiper/swiper-item",
+    "t-swiper-nav": "tdesign-miniprogram/miniprogram_dist/swiper/swiper-nav"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

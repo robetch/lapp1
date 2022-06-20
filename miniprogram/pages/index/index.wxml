@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<!-- <view class="container"> -->
+  <view class="demo swiper-demo">
+  <!-- <view class="demo-title">Swiper 轮播</view> -->
+  <!-- <view class="demo-desc">
+    用于循环轮播一组图片或内容，也可以滑动进行切换，轮播动效时间可以设置。
+  </view> -->
+  <view class="demo-section">
+    <t-demo title="01 类型" desc="轮播图的多种样式"></t-demo>
+    <view class="swiper-box">
+      <t-swiper
+        current="2"
+        autoplay="{{autoplay}}"
+        duration="{{duration}}"
+        interval="{{interval}}"
+        navigation="{{navigation2}}"
+      >
+        <t-swiper-item wx:for="{{items}}" wx:key="index">
+          <view class="demo_desc"></view>    
+          <view class="item {{item.cls}}">{{index}}<image src="{{item.image}}" class="img" />
+          </view>
+        </t-swiper-item>
+      </t-swiper>
+    </view>
+    <view class="swiper-demo-space" />
+  </view>
+</view>
+
+
+  <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+<!-- </view> -->
